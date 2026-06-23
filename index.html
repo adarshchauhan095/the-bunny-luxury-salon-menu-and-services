@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Bunny Luxury Hair & Beauty Studio</title>
+    <style>
+        :root {
+            --primary: #d4af37; /* Luxury Gold */
+            --dark: #111111; /* Deep Black */
+            --light: #f9f9f9;
+            --grey: #222222;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--dark);
+            color: var(--light);
+            line-height: 1.6;
+        }
+
+        /* Header & Navigation */
+        header {
+            background-color: rgba(17, 17, 17, 0.95);
+            border-bottom: 1px solid var(--primary);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: var(--primary);
+            font-size: 1.5rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 6rem 2rem;
+            text-align: center;
+            background: linear-gradient(rgba(17,17,17,0.8), rgba(17,17,17,0.9)), url('https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1200&q=80') center/cover;
+            border-bottom: 1px solid #333;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            color: var(--light);
+            margin-bottom: 1rem;
+            letter-spacing: 1px;
+        }
+
+        .hero h1 span {
+            color: var(--primary);
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: #ccc;
+            max-width: 600px;
+            margin: 0 auto 2rem;
+        }
+
+        .btn {
+            background-color: var(--primary);
+            color: var(--dark);
+            padding: 0.8rem 2rem;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 4px;
+            transition: 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .btn:hover {
+            background-color: #fff;
+            color: var(--dark);
+        }
+
+        /* Main Container */
+        .container {
+            max-width: 1100px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+        }
+
+        .section-title {
+            text-align: center;
+            color: var(--primary);
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        /* Menu Grid */
+        .menu-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+        }
+
+        .category-card {
+            background-color: var(--grey);
+            border: 1px solid #333;
+            border-radius: 8px;
+            padding: 2rem;
+            transition: 0.3s;
+        }
+
+        .category-card:hover {
+            border-color: var(--primary);
+            transform: translateY(-5px);
+        }
+
+        .category-title {
+            color: var(--primary);
+            font-size: 1.4rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid #444;
+            padding-bottom: 0.5rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .service-item {
+            margin-bottom: 1.2rem;
+        }
+
+        .service-name {
+            font-weight: 600;
+            color: var(--light);
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .service-desc {
+            font-size: 0.9rem;
+            color: #999;
+            margin-top: 0.2rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #050505;
+            text-align: center;
+            padding: 3rem 2rem;
+            border-top: 1px solid #222;
+            color: #777;
+        }
+
+        footer p {
+            margin-bottom: 1rem;
+        }
+
+        .footer-contacts {
+            color: var(--primary);
+            margin-top: 1rem;
+            font-size: 1rem;
+        }
+
+        /* Responsive Settings */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2.2rem; }
+            .section-title { font-size: 2rem; }
+            header { text-align: center; justify-content: center; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">The Bunny</div>
+    </header>
+
+    <section class="hero">
+        <h1><span>The Bunny</span> Luxury Hair & Beauty Studio</h1>
+        <p>Experience world-class hair transformations, advanced skincare, and premium bridal makeovers tailored just for you.</p>
+        <a href="tel:+917015027886" class="btn">Book Appointment</a>
+    </section>
+
+    <main class="container">
+        <h2 class="section-title">Our Luxury Menu</h2>
+        
+        <div class="menu-grid">
+            
+            <div class="category-card">
+                <h3 class="category-title">Hair Care & Style</h3>
+                <div class="service-item">
+                    <div class="service-name">Premium Haircut & Styling</div>
+                    <div class="service-desc">Includes luxury hair wash, expert consultation, and blow-dry.</div>
+                </div>
+                <div class="service-item">
+                    <div class="service-name">Global Hair Coloring</div>
+                    <div class="service-desc">Premium ammonia-free permanent shades & root touch-ups.</div>
+                </div>
+                <div class="service-item">
+                    <div class="service-name">Balayage & Highlights</div>
+                    <div class="service-desc">Customized dimensional tones and ombre effects.</div>
+                </div>
+                <div class="service-item">
+                    <div class="service-name">Keratin & Botox Treatment</div>
+                    <div class="service-desc">Deep protein therapy to eliminate frizz and add mirror-shine.</div>
+                </div>
+            </div>
+
+            <div class="category-card">
+                <h3 class="category-title">Advanced Skin Care</h3>
+                <div class="service-item">
+                    <div class="service-name">Luxury HydraFacial</div>
+                    <div class="service-desc">Deep vortex cleansing, exfoliation, and intense hydration.</div>
+                </div>
+                <div class="service-item">
+                    <div class="service-name">Skin Brightening & D-Tan</div>
+                    <div class="service-desc">Premium therapies to remove tan and even skin tone.</div>
+                </div>
+                <div class="service-item">
+                    <div class="service-name">Anti-Aging Collagen Facial</div>
+                    <div class="service-desc">Advanced tightening facial to boost skin elasticity.</div>
+                </div>
+            </div>
+
+            <div class="category-card">
+                <h3 class="category-title">Luxury Makeovers</h3>
+                <div class="service-item">
+                    <div class="service-name">Signature Bridal Makeup</div>
+                    <div class="service-desc">Flawless HD/Airbrush makeup with hair styling & draping.</div>
+                </div>
+                <div class="service-item">
+                    <div class="service-name">Celebrity Party Makeup</div>
+                    <div class="service-desc">Glamorous evening or cocktail looks with custom lashes.</div>
+                </div>
+                <div class="service-item">
+                    <div class="service-name">Pre-Bridal Grooming</div>
+                    <div class="service-desc">Complete head-to-toe customized premium beauty packages.</div>
+                </div>
+            </div>
+
+            <div class="category-card">
+                <h3 class="category-title">Nails & Pampering</h3>
+                <div class="service-item">
+                    <div class="service-name">Nail Extensions & Art</div>
+                    <div class="service-desc">Long-lasting gel/acrylic extensions with trendy custom art.</div>
+                </div>
+                <div class="service-item">
+                    <div class="service-name">Ice-Cream Spa Pedicure</div>
+                    <div class="service-desc">Organic bomb pedicure with deep massage and skin renewal mask.</div>
+                </div>
+                <div class="service-item">
+                    <div class="service-name">Paraffin Wax Manicure</div>
+                    <div class="service-desc">Intense nourishing treatment for ultra-soft hands.</div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 The Bunny Luxury Hair & Beauty Studio. All Rights Reserved.</p>
+        <p>Visit us for a premium salon experience.</p>
+        <div class="footer-contacts">
+            <p>📞 Call for Booking: +91 7015027886</p>
+            <p>📍 Location: Sector 70, Village Mattaur, Sahibzada Ajit Singh Nagar, Punjab (160071)</p>
+        </div>
+    </footer>
+
+</body>
+</html>
