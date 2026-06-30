@@ -3,277 +3,751 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Bunny Luxury Hair & Beauty Studio</title>
+    <title>The Bunny | Luxury Hair, Nails & Beauty Studio | Unisex Salon Mohali</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Experience world-class hair transformations, advanced skincare, luxury nail art, and flawless bridal makeovers at The Bunny Luxury Hair & Beauty Studio in Sector 70, Sahibzada Ajit Singh Nagar. Best unisex salon for him and her.">
+    <meta name="keywords" content="The Bunny Salon, Luxury Salon Mohali, Best Unisex Salon Chandigarh, Hair Botox Mohali, HydraFacial Sahibzada Ajit Singh Nagar, Nail Extensions Sector 70, Bridal Makeup Punjab">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://thebunnysalon.com">
+
+    <!-- Open Graph for Social Sharing -->
+    <meta property="og:title" content="The Bunny | Luxury Hair, Nails & Beauty Studio">
+    <meta property="og:description" content="Premium grooming, hair treatments, and luxury aesthetics for Him & Her in Sahibzada Ajit Singh Nagar.">
+    <meta property="og:type" content="business.business">
+    
+    <!-- Google Fonts & Font Awesome Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
     <style>
         :root {
             --primary: #d4af37; /* Luxury Gold */
-            --dark: #111111; /* Deep Black */
-            --light: #f9f9f9;
-            --grey: #222222;
+            --primary-glow: rgba(212, 175, 55, 0.2);
+            --dark-bg: #0a0a0a; /* True Deep Black */
+            --card-bg: #141414; /* Charcoal Accent */
+            --text-light: #f5f5f5;
+            --text-muted: #aaaaaa;
+            --gold-gradient: linear-gradient(135deg, #b38728 0%, #fbf5b7 50%, #daae41 100%);
         }
 
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Montserrat', sans-serif;
+            scroll-behavior: smooth;
         }
 
         body {
-            background-color: var(--dark);
-            color: var(--light);
+            background-color: var(--dark-bg);
+            color: var(--text-light);
             line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Utility Styles */
+        .gold-text {
+            color: var(--primary);
+            background: var(--gold-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .serif-font {
+            font-family: 'Cinzel', serif;
         }
 
         /* Header & Navigation */
         header {
-            background-color: rgba(17, 17, 17, 0.95);
-            border-bottom: 1px solid var(--primary);
+            background-color: rgba(10, 10, 10, 0.95);
+            border-bottom: 1px solid rgba(212, 175, 55, 0.3);
             position: sticky;
             top: 0;
             z-index: 1000;
-            padding: 1rem 2rem;
+            padding: 1rem 5%;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            backdrop-filter: blur(10px);
         }
 
-        .logo {
-            color: var(--primary);
-            font-size: 1.5rem;
-            font-weight: bold;
-            text-transform: uppercase;
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .logo-img {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            border: 1px solid var(--primary);
+            background: #fff;
+            padding: 2px;
+            object-fit: contain;
+        }
+
+        .logo-text h1 {
+            font-size: 1.4rem;
             letter-spacing: 2px;
+            margin: 0;
+        }
+
+        .logo-text p {
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: var(--text-muted);
+        }
+
+        nav a {
+            color: var(--text-light);
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--primary);
         }
 
         /* Hero Section */
         .hero {
-            padding: 6rem 2rem;
+            position: relative;
+            padding: 10rem 2rem 8rem;
             text-align: center;
-            background: linear-gradient(rgba(17,17,17,0.8), rgba(17,17,17,0.9)), url('https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1200&q=80') center/cover;
-            border-bottom: 1px solid #333;
+            background: linear-gradient(rgba(10,10,10,0.75), rgba(10,10,10,0.95)), 
+                        url('https://images.unsplash.com/photo-1560066984-138dadb4c035?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.2);
         }
 
-        .hero h1 {
-            font-size: 3rem;
-            color: var(--light);
+        .hero-badge {
+            display: inline-block;
+            border: 1px solid var(--primary);
+            padding: 0.4rem 1.5rem;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            margin-bottom: 1.5rem;
+            border-radius: 50px;
+            background: rgba(212, 175, 55, 0.05);
+        }
+
+        .hero h2 {
+            font-size: 3.5rem;
             margin-bottom: 1rem;
-            letter-spacing: 1px;
-        }
-
-        .hero h1 span {
-            color: var(--primary);
+            letter-spacing: 3px;
+            font-weight: 700;
         }
 
         .hero p {
-            font-size: 1.2rem;
-            color: #ccc;
-            max-width: 600px;
-            margin: 0 auto 2rem;
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            max-width: 700px;
+            margin: 0 auto 2.5rem;
+            font-weight: 300;
+        }
+
+        .cta-group {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
         }
 
         .btn {
-            background-color: var(--primary);
-            color: var(--dark);
-            padding: 0.8rem 2rem;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 0.9rem 2.5rem;
             text-decoration: none;
-            font-weight: bold;
+            font-weight: 700;
             border-radius: 4px;
-            transition: 0.3s ease;
+            transition: 0.4s ease;
             text-transform: uppercase;
             letter-spacing: 1px;
+            font-size: 0.85rem;
         }
 
-        .btn:hover {
-            background-color: #fff;
-            color: var(--dark);
+        .btn-primary {
+            background: var(--gold-gradient);
+            color: var(--dark-bg);
+            box-shadow: 0 4px 15px var(--primary-glow);
         }
 
-        /* Main Container */
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+        }
+
+        .btn-secondary {
+            border: 1px solid var(--primary);
+            color: var(--text-light);
+            background: transparent;
+        }
+
+        .btn-secondary:hover {
+            background: rgba(212, 175, 55, 0.1);
+            color: var(--primary);
+        }
+
+        /* Features Bar */
+        .features-bar {
+            background-color: var(--card-bg);
+            padding: 2rem 5%;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 1.5rem;
+            border-bottom: 1px solid #222;
+            text-align: center;
+        }
+
+        .feature-item {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+            color: var(--text-light);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .feature-item i {
+            color: var(--primary);
+            font-size: 1.5rem;
+        }
+
+        /* Main Grid & Menu Content */
         .container {
-            max-width: 1100px;
-            margin: 4rem auto;
+            max-width: 1200px;
+            margin: 5rem auto;
             padding: 0 2rem;
         }
 
-        .section-title {
+        .section-header {
             text-align: center;
-            color: var(--primary);
+            margin-bottom: 4rem;
+        }
+
+        .section-header h3 {
             font-size: 2.5rem;
-            margin-bottom: 3rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 0.5rem;
+        }
+
+        .section-header p {
+            color: var(--text-muted);
+            font-size: 0.95rem;
             text-transform: uppercase;
             letter-spacing: 2px;
         }
 
-        /* Menu Grid */
         .menu-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
             gap: 2.5rem;
         }
 
         .category-card {
-            background-color: var(--grey);
-            border: 1px solid #333;
+            background-color: var(--card-bg);
+            border: 1px solid rgba(255, 255, 255, 0.05);
             border-radius: 8px;
-            padding: 2rem;
+            padding: 2.5rem 2rem;
+            transition: 0.3s ease-in-out;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .category-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: var(--gold-gradient);
+            opacity: 0;
             transition: 0.3s;
         }
 
         .category-card:hover {
-            border-color: var(--primary);
+            border-color: rgba(212, 175, 55, 0.4);
             transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+        }
+
+        .category-card:hover::before {
+            opacity: 1;
+        }
+
+        .category-title-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 2rem;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            padding-bottom: 0.75rem;
+        }
+
+        .category-title-wrapper i {
+            color: var(--primary);
+            font-size: 1.5rem;
         }
 
         .category-title {
-            color: var(--primary);
-            font-size: 1.4rem;
-            margin-bottom: 1.5rem;
-            border-bottom: 1px solid #444;
-            padding-bottom: 0.5rem;
+            font-size: 1.25rem;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 1.5px;
+            font-weight: 600;
+        }
+
+        .services-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
         }
 
         .service-item {
-            margin-bottom: 1.2rem;
+            position: relative;
+        }
+
+        .service-main {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
         }
 
         .service-name {
             font-weight: 600;
-            color: var(--light);
-            display: flex;
-            justify-content: space-between;
+            font-size: 0.95rem;
+            color: var(--text-light);
+            letter-spacing: 0.5px;
+        }
+
+        .service-dots {
+            flex-grow: 1;
+            border-bottom: 1px dotted rgba(255,255,255,0.15);
+            margin: 0 10px;
+            position: relative;
+            top: -4px;
+        }
+
+        .service-price {
+            font-family: 'Cinzel', serif;
+            color: var(--primary);
+            font-weight: 700;
+            font-size: 0.95rem;
         }
 
         .service-desc {
-            font-size: 0.9rem;
-            color: #999;
+            font-size: 0.8rem;
+            color: var(--text-muted);
             margin-top: 0.2rem;
+        }
+
+        /* Contact & Info Block */
+        .info-section {
+            background-color: var(--card-bg);
+            border-top: 1px solid rgba(212, 175, 55, 0.2);
+            padding: 5rem 2rem;
+        }
+
+        .info-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 3rem;
+        }
+
+        .info-box h4 {
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 1.5rem;
+            color: var(--primary);
+            position: relative;
+        }
+
+        .info-box p {
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+        }
+
+        .info-box p i {
+            color: var(--primary);
+            margin-top: 3px;
+            width: 20px;
+        }
+
+        .phone-links a {
+            color: var(--text-light);
+            text-decoration: none;
+            transition: 0.3s;
+            display: block;
+            margin-bottom: 0.3rem;
+        }
+
+        .phone-links a:hover {
+            color: var(--primary);
         }
 
         /* Footer */
         footer {
             background-color: #050505;
             text-align: center;
-            padding: 3rem 2rem;
-            border-top: 1px solid #222;
-            color: #777;
+            padding: 2.5rem 2rem;
+            border-top: 1px solid #1a1a1a;
+            color: #666;
+            font-size: 0.8rem;
+            letter-spacing: 1px;
         }
 
         footer p {
-            margin-bottom: 1rem;
-        }
-
-        .footer-contacts {
-            color: var(--primary);
-            margin-top: 1rem;
-            font-size: 1rem;
+            margin-bottom: 0.5rem;
         }
 
         /* Responsive Settings */
         @media (max-width: 768px) {
-            .hero h1 { font-size: 2.2rem; }
-            .section-title { font-size: 2rem; }
-            header { text-align: center; justify-content: center; }
+            header {
+                flex-direction: column;
+                gap: 1rem;
+                padding: 1.5rem 1rem;
+            }
+            nav {
+                display: flex;
+                gap: 10px;
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+            nav a {
+                margin: 0 8px;
+            }
+            .hero h2 { font-size: 2.2rem; }
+            .section-header h3 { font-size: 1.8rem; }
+            .menu-grid { grid-template-columns: 1fr; }
         }
     </style>
+
+    <!-- Structured Data (JSON-LD Schema) for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BeautySalon",
+      "name": "The Bunny Luxury Hair & Beauty Studio",
+      "image": "image_4.png",
+      "url": "https://thebunnysalon.com",
+      "telephone": "+917015027886",
+      "priceRange": "$$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "259, Opposite Gurudwara Sahib, Sector 70, Village Mattaur",
+        "addressLocality": "Sahibzada Ajit Singh Nagar",
+        "addressRegion": "Punjab",
+        "postalCode": "160071",
+        "addressCountry": "IN"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": "30.7022",
+        "longitude": "76.7194"
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday",
+          "Saturday",
+          "Sunday"
+        ],
+        "opens": "09:00",
+        "closes": "21:00"
+      },
+      "sameAs": []
+    }
+    </script>
 </head>
 <body>
 
+    <!-- Header & Navigation -->
     <header>
-        <div class="logo">The Bunny</div>
+        <div class="logo-container">
+            <!-- Using logo reference placeholder from image_4.png -->
+            <img src="image_4.png" alt="The Bunny Luxury Hair Nails Beauty Logo" class="logo-img">
+            <div class="logo-text">
+                <h1 class="serif-font gold-text">The Bunny</h1>
+                <p>Hair • Nails • Beauty</p>
+            </div>
+        </div>
+        <nav>
+            <a href="#services">Our Menu</a>
+            <a href="#about">Experience</a>
+            <a href="#contact">Find Us</a>
+        </nav>
     </header>
 
+    <!-- Hero Section -->
     <section class="hero">
-        <h1><span>The Bunny</span> Luxury Hair & Beauty Studio</h1>
-        <p>Experience world-class hair transformations, advanced skincare, and premium bridal makeovers tailored just for you.</p>
-        <a href="tel:+917015027886" class="btn">Book Appointment</a>
+        <span class="hero-badge gold-text">We Enhance, You Shine</span>
+        <h2 class="serif-font">Be Beautiful. <span class="gold-text">Be You.</span></h2>
+        <p>Step into premium luxury. Experience world-class hair styling, clinical treatments, custom nail extensions, and flawless bridal makeovers tailored exclusively for him and her.</p>
+        <div class="cta-group">
+            <a href="tel:+917015027886" class="btn btn-primary"><i class="fa-solid fa-phone"></i> Call 7015027886</a>
+            <a href="tel:+917082071840" class="btn btn-secondary"><i class="fa-solid fa-phone"></i> Call 7082071840</a>
+        </div>
     </section>
 
-    <main class="container">
-        <h2 class="section-title">Our Luxury Menu</h2>
+    <!-- Features Trust Bar (Sourced from image_3.png icons) -->
+    <section class="features-bar">
+        <div class="feature-item">
+            <i class="fa-solid fa-crown"></i>
+            <span>Premium Products</span>
+        </div>
+        <div class="feature-item">
+            <i class="fa-solid fa-shield-hand"></i>
+            <span>Hygienic & Safe</span>
+        </div>
+        <div class="feature-item">
+            <i class="fa-solid fa-user-tie"></i>
+            <span>Expert Professionals</span>
+        </div>
+        <div class="feature-item">
+            <i class="fa-solid fa-sparkles"></i>
+            <span>Luxury Experience</span>
+        </div>
+        <div class="feature-item">
+            <i class="fa-solid fa-certificate"></i>
+            <span>Satisfaction Guaranteed</span>
+        </div>
+    </section>
+
+    <!-- Main Container -->
+    <main class="container" id="services">
+        <div class="section-header">
+            <h3 class="serif-font gold-text">Our Luxury Menu</h3>
+            <p>Experience The Art of Beauty</p>
+        </div>
         
         <div class="menu-grid">
             
+            <!-- LADIES HAIR SERVICES (Sourced from image_2.png & image_3.png) -->
             <div class="category-card">
-                <h3 class="category-title">Hair Care & Style</h3>
-                <div class="service-item">
-                    <div class="service-name">Premium Haircut & Styling</div>
-                    <div class="service-desc">Includes luxury hair wash, expert consultation, and blow-dry.</div>
+                <div class="category-title-wrapper">
+                    <i class="fa-solid fa-scissors"></i>
+                    <h4 class="category-title">Ladies Hair Services</h4>
                 </div>
-                <div class="service-item">
-                    <div class="service-name">Global Hair Coloring</div>
-                    <div class="service-desc">Premium ammonia-free permanent shades & root touch-ups.</div>
-                </div>
-                <div class="service-item">
-                    <div class="service-name">Balayage & Highlights</div>
-                    <div class="service-desc">Customized dimensional tones and ombre effects.</div>
-                </div>
-                <div class="service-item">
-                    <div class="service-name">Keratin & Botox Treatment</div>
-                    <div class="service-desc">Deep protein therapy to eliminate frizz and add mirror-shine.</div>
+                <div class="services-list">
+                    <div class="service-item">
+                        <div class="service-main"><span class="service-name">Haircut & Styling</span><span class="service-dots"></span><span class="service-price">Menu</span></div>
+                        <div class="service-desc">Luxury wash, custom cut, and master blow-dry blowouts.</div>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-main"><span class="service-name">Global Hair Color & Ombre</span><span class="service-dots"></span><span class="service-price">Menu</span></div>
+                        <div class="service-desc">Premium ammonia-free permanent shades & custom balayage.</div>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-main"><span class="service-name">Root Touch-up</span><span class="service-dots"></span><span class="service-price">Menu</span></div>
+                        <div class="service-desc">Flawless, seamless root color matching.</div>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-main"><span class="service-name">Highlights / Balayage</span><span class="service-dots"></span><span class="service-price">Menu</span></div>
+                        <div class="service-desc">Customized dimensional multi-tonal highlights.</div>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-main"><span class="service-name">Permanent Straightening</span><span class="service-dots"></span><span class="service-price">Menu</span></div>
+                        <div class="service-desc">Sleek, straight finish with high-gloss brilliance.</div>
+                    </div>
                 </div>
             </div>
 
+            <!-- PREMIUM HAIR TREATMENTS (Sourced from image_2.png & image_3.png) -->
             <div class="category-card">
-                <h3 class="category-title">Advanced Skin Care</h3>
-                <div class="service-item">
-                    <div class="service-name">Luxury HydraFacial</div>
-                    <div class="service-desc">Deep vortex cleansing, exfoliation, and intense hydration.</div>
+                <div class="category-title-wrapper">
+                    <i class="fa-solid fa-sparkles"></i>
+                    <h4 class="category-title">Advanced Hair Treatments</h4>
                 </div>
-                <div class="service-item">
-                    <div class="service-name">Skin Brightening & D-Tan</div>
-                    <div class="service-desc">Premium therapies to remove tan and even skin tone.</div>
-                </div>
-                <div class="service-item">
-                    <div class="service-name">Anti-Aging Collagen Facial</div>
-                    <div class="service-desc">Advanced tightening facial to boost skin elasticity.</div>
+                <div class="services-list">
+                    <div class="service-item">
+                        <div class="service-main"><span class="service-name">Keratin Therapy</span><span class="service-dots"></span><span class="service-price">Menu</span></div>
+                        <div class="service-desc">Deep protein infusion to eliminate stubborn frizz.</div>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-main"><span class="service-name">Botox Hair Therapy</span><span class="service-dots"></span><span class="service-price">Menu</span></div>
+                        <div class="service-desc">Anti-aging deep structural replenishment and mirror shine.</div>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-main"><span class="service-name">Nanoplastia Treatment</span><span class="service-dots"></span><span class="service-price">Menu</span></div>
+                        <div class="service-desc">Premium organic amino-acid long-lasting restoration.</div>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-main"><span class="service-name">Olaplex Plex Repair</span><span class="service-dots"></span><span class="service-price">Menu</span></div>
+                        <div class="service-desc">Bond-building internal repair therapy for compromised hair.</div>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-main"><span class="service-name">Hair Spa & Scalp Detox</span><span class="service-dots"></span><span class="service-price">Menu</span></div>
+                        <div class="service-desc">Deep conditioning and structural moisture balance.</div>
+                    </div>
                 </div>
             </div>
 
+            <!-- SKIN & FACIAL SERVICES (Sourced from image_2.png & image_3.png) -->
             <div class="category-card">
-                <h3 class="category-title">Luxury Makeovers</h3>
-                <div class="service-item">
-                    <div class="service-name">Signature Bridal Makeup</div>
-                    <div class="service-desc">Flawless HD/Airbrush makeup with hair styling & draping.</div>
+                <div class="category-title-wrapper">
+                    <i class="fa-solid fa-face-smile-beam"></i>
+                    <h4 class="category-title">Skin & Facial Aesthetics</h4>
                 </div>
-                <div class="service-item">
-                    <div class="service-name">Celebrity Party Makeup</div>
-                    <div class="service-desc">Glamorous evening or cocktail looks with custom lashes.</div>
-                </div>
-                <div class="service-item">
-                    <div class="service-name">Pre-Bridal Grooming</div>
-                    <div class="service-desc">Complete head-to-toe customized premium beauty packages.</div>
+                <div class="services-list">
+                    <div class="service-item">
+                        <div class="service-main"><span class="service-name">Luxury HydraFacial</span><span class="service-dots"></span><span class="service-price">Menu</span></div>
+                        <div class="service-desc">Vortex deep pore extraction, exfoliation, and active infusion.</div>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-main"><span class="service-name">Premium Gold Facial</span><span class="service-dots"></span><span class="service-price">Menu</span></div>
+                        <div class="service-desc">Elite radiance facial for optimal brightening and cellular glow.</div>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-main"><span class="service-name">Anti-Tan D-Tan Therapy</span><span class="service-dots"></span><span class="service-price">Menu</span></div>
+                        <div class="service-desc">Targeted hyperpigmentation removal to restore natural base tone.</div>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-main"><span class="service-name">Acne & Pimple Control Facial</span><span class="service-dots"></span><span class="service-price">Menu</span></div>
+                        <div class="service-desc">Clinical purification to clarify oily and active acne surfaces.</div>
+                    </div>
                 </div>
             </div>
 
+            <!-- NAILS & ESSENTIAL SPA (Sourced from image_2.png & image_3.png) -->
             <div class="category-card">
-                <h3 class="category-title">Nails & Pampering</h3>
-                <div class="service-item">
-                    <div class="service-name">Nail Extensions & Art</div>
-                    <div class="service-desc">Long-lasting gel/acrylic extensions with trendy custom art.</div>
+                <div class="category-title-wrapper">
+                    <i class="fa-solid fa-hand-sparkles"></i>
+                    <h4 class="category-title">Nail Art & Extensions</h4>
                 </div>
-                <div class="service-item">
-                    <div class="service-name">Ice-Cream Spa Pedicure</div>
-                    <div class="service-desc">Organic bomb pedicure with deep massage and skin renewal mask.</div>
+                <div class="services-list">
+                    <div class="service-item">
+                        <div class="service-main"><span class="service-name">Gel & Acrylic Extensions</span><span class="service-dots"></span><span class="service-price">Menu</span></div>
+                        <div class="service-desc">Ultra-durable, lightweight structured premium extensions.</div>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-main"><span class="service-name">Trendy Custom Nail Art</span><span class="service-dots"></span><span class="service-price">Menu</span></div>
+                        <div class="service-desc">Chrome, 3D, ombre, and precision hand-drawn graphics.</div>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-main"><span class="service-name">Gel Nail Polish</span><span class="service-dots"></span><span class="service-price">Menu</span></div>
+                        <div class="service-desc">Chip-resistant, long-wear high-shine UV finish.</div>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-main"><span class="service-name">Ice-Cream Bomb Pedicure</span><span class="service-dots"></span><span class="service-price">Menu</span></div>
+                        <div class="service-desc">Organic soak, exfoliation scrub, and deep continuous massage.</div>
+                    </div>
                 </div>
-                <div class="service-item">
-                    <div class="service-name">Paraffin Wax Manicure</div>
-                    <div class="service-desc">Intense nourishing treatment for ultra-soft hands.</div>
+            </div>
+
+            <!-- MEN'S GROOMING SERVICES (Sourced from image_2.png & image_3.png) -->
+            <div class="category-card">
+                <div class="category-title-wrapper">
+                    <i class="fa-solid fa-user-astronaut"></i>
+                    <h4 class="category-title">Men's Executive Services</h4>
+                </div>
+                <div class="services-list">
+                    <div class="service-item">
+                        <div class="service-main"><span class="service-name">Haircut & Beard Styling</span><span class="service-dots"></span><span class="service-price">Menu</span></div>
+                        <div class="service-desc">Sharp trend cuts paired with clean line razor shaves.</div>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-main"><span class="service-name">Beard Trim & Detailing</span><span class="service-dots"></span><span class="service-price">Menu</span></div>
+                        <div class="service-desc">Moustache sculpting and custom beard density clipping.</div>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-main"><span class="service-name">Men's Hair Spa / Treatment</span><span class="service-dots"></span><span class="service-price">Menu</span></div>
+                        <div class="service-desc">Targeted nourishment for styling damage and dry roots.</div>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-main"><span class="service-name">Executive Clean-Up & D-Tan</span><span class="service-dots"></span><span class="service-price">Menu</span></div>
+                        <div class="service-desc">Pollution clearance facial explicitly tuned for men's skin.</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- LUXURY MAKEOVERS & OTHER (Sourced from image_2.png & image_3.png) -->
+            <div class="category-card">
+                <div class="category-title-wrapper">
+                    <i class="fa-solid fa-gem"></i>
+                    <h4 class="category-title">Makeovers & Extras</h4>
+                </div>
+                <div class="services-list">
+                    <div class="service-item">
+                        <div class="service-main"><span class="service-name">Signature Bridal Makeup</span><span class="service-dots"></span><span class="service-price">Menu</span></div>
+                        <div class="service-desc">High Definition / Airbrush media makeup with draping.</div>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-main"><span class="service-name">Celebrity Party Makeup</span><span class="service-dots"></span><span class="service-price">Menu</span></div>
+                        <div class="service-desc">Cocktail/evening look design featuring premium lash sets.</div>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-main"><span class="service-name">Waxing (Full Body / Face)</span><span class="service-dots"></span><span class="service-price">Menu</span></div>
+                        <div class="service-desc">Smooth premium wax for arms, legs, face, or full body.</div>
+                    </div>
+                    <div class="service-item">
+                        <div class="service-main"><span class="service-name">Lash & Brow Extensions</span><span class="service-dots"></span><span class="service-price">Menu</span></div>
+                        <div class="service-desc">Threading, shaping, lifting, and custom tinting applications.</div>
+                    </div>
                 </div>
             </div>
 
         </div>
     </main>
 
+    <!-- Info & Contact Section -->
+    <section class="info-section" id="contact">
+        <div class="info-container">
+            <div class="info-box">
+                <h4 class="serif-font">Contact Details</h4>
+                <div class="phone-links">
+                    <p><i class="fa-solid fa-phone-volume"></i><span>
+                        <a href="tel:+917015027886">+91 7015027886</a>
+                        <a href="tel:+917082071840">+91 7082071840</a>
+                    </span></p>
+                </div>
+                <p><i class="fa-solid fa-envelope"></i> booking@thebunnysalon.com</p>
+            </div>
+            
+            <div class="info-box">
+                <h4 class="serif-font">Our Address</h4>
+                <p><i class="fa-solid fa-location-dot"></i> 
+                    <span>259, Near Shine Enclave, Front of Gurudwara Sahib,<br>
+                    Village Mattaur, Sector 70,<br>
+                    Sahibzada Ajit Singh Nagar, Punjab (160071)</span>
+                </p>
+            </div>
+            
+            <div class="info-box">
+                <h4 class="serif-font">Opening Hours</h4>
+                <p><i class="fa-solid fa-clock"></i> <span>Open 7 Days a Week<br>09:30 AM - 11:00 PM</span></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <footer>
         <p>&copy; 2026 The Bunny Luxury Hair & Beauty Studio. All Rights Reserved.</p>
-        <p>Visit us for a premium salon experience.</p>
-        <div class="footer-contacts">
-            <p>📞 Call for Booking: +91 7015027886</p>
-            <p>📍 Location: Sector 70, Village Mattaur, Sahibzada Ajit Singh Nagar, Punjab (160071)</p>
-        </div>
+        <p style="color: #444;">Good Hair. Good Nails. Good Vibes. Great You.</p>
     </footer>
 
 </body>
